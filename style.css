@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+body{
+  margin: 0;
+  fonr-size: 16px;
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.custom-box{
+  max-margin: 700px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  animation: fadeInRight 1s ease;
+}
+@keyframes fadeInRight{
+  0%{
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.custom-box::before,
+.custom-box::after{
+  content: '';
+  clear: both;
+  display: table;
+}
+.custom-box.hide{
+  display: none;
+}
+.home-box h3{
+  font sze: 18px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom:15px;
+  line-height: 25px;
+}
+.home-box p{
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 22px;
+  color:#000000;
+  font-weight: 400;
+}
+.home-box p span{
+  font-weight: 400;
+}
+.home-box .btn{
+  margin-top: 20px;
+}
+.btn{
+  padding: 15px 45px;
+  background-color: #009688;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+.quiz-box .question-number,
+.quiz-box .question-text,
+.quiz-box .option-container,
+.quiz-box .next-question-btn,
+.quiz-box .answer-indicator{
+  width: 100%;
+  float: left;
+}
+.quiz-box .question-number{
+  font-size: 18px;
+  color: #009688;
+  font-weight: 600;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px;
+  line-height: 25px
+}
+.quiz-box .question-text{
+  font-size: 22px;
+  color: #000000;
+  line-height: 28px;
+  font-weight:400;
+  padding: 20px 0;
+  margin: 0;
+}
+.quiz-box .question-text img{
+  max-width: 100%;
+  display: block;
+  margin-top: 15px;
+}
+.quiz-box .option-container .option{
+  background-color: #cccccc;
+  padding: 15px;
+  font-size:16px;
+  line-height:22px;
+  color:#000000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  position: relative;
+  overflow: :hidden;
+  
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.quiz-box .option-container .option.done{
+  pointer-events: none;
+}
+.quiz-box .option-container .option.correct::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  z-index: -1 ;
+  animation: slideInLeft .5s ease forwards;
+}
+@keyframes slideInLeft{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform:translateX(0%);
+  }
+}
+.quiz-box .option-container .option.correct{
+  color: #ffffff;
+}
+.quiz-box .option-container .option.wrong::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  z-index: -1 ;
+  animation: slideInLeft .5s ease forwards;
+}
+.quiz-box .option-container .option.wrong{
+  color: #ffffff;
+}
+.quiz-box .btn{
+  margin: 15px 0;
+}
+.quiz-box .answer-indicator{
+  border-top: 1px solid #cccccc;
+}
+.quiz-box .answer-indicator div{
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-right: 3px;
+  margin-top: 15px;
+}
+.quiz-box .answer-indicator div.correct{
+  background-color:green;
+  background-image:url('https://lh3.googleusercontent.com/XtwYX-5B17Fs2Xv9AkZh-Yp-Stf1wBoixTO42uG4KSwf_v8i86HZTzF_nxBqPADTH0jkOh-iHGkFPyrc6gMd8jhV_SRa6YxJRurnA6PT14OdySCJRcNIrvG5tWnw0QN65PM8oAU5oC6p5PBviAiiSg7OqF_L9lyfmio5EMvH2UzbKEyk89n6vgKWKE84j2kYNNesXHL_10bGsHZP5x1hD8oUB4T4DVZ5s6Gmz39cdEm08wgZu4RzWT9J1EdDRvkQ7EsZzDZB-zkzIrK98R-9Ds8_vSFTI4MIRkF56e5smu7KgfLF9LsXoigwHHHQtLFH08UwEzgfw6iVcrM02vfDxzJN25zG8N1WsNnE55Dm6stQMLCvdK2kUAumgVp8I-h_4emO5SF1OOa4xlj0VU8jZxbXHvj4QlexGCbeKeYIAwNjrLACjLx_NauxcMn-_7Sw_hgao4MhhCHLKilMFX710W8m8mIRiI5x_H7BkjQ1zShxAz53pRNvCNSlIy6vbpA9spDJqVK3DRYlYK2dULTnH5BuPUQKeUHDtFHXnqyPYyNO7UZDq0QBqGsaPaCy9Y4RCDwyr9zlW1KzyRMff5GA9lPa0w3LftpukAk7pQBpBIRPdeAQWR275eIXSF2sTHH7JuTpQRr9LdRl3YDCMaUQADLmXCK3sBIxM4tb8QXc2H9jcOWLWvlyJAczujraShzd9mn2f8CSlaDBeiBMZHdIi23CK7DRCcxl9Q1belAbqdp6tyUhjpNIuGVH0LOW6k8zRPmLoeaK6qBJ9f3G8MDJNHVEKch5NHMGfJrWOc8ict3zxUa5iPLwuA5LMMv-Vn5c9qr7ZxVZeYnkrQzc50Mnpf2Gn-RtMggfhpqaxKKWFG6vot6QwAHv3ZJ9HDLM-gnNtmXIi17hnsdthwd6J_5DEr_dkzfdTiWPpxD8q5RlNQZSdg=s30-no?authuser=0');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.quiz-box .answer-indicator div.wrong{
+  background-color:red;
+  background-image: url('https://lh3.googleusercontent.com/9wlw_MhF9SVRiim-BwIAS26Rp1G0Bb7sTGLWH6iGIikPNYzGBKEjKE97wL5RsfpNDJEV-me6oJUxjzu_l66yP_lLlls0J0pI4UJEIuDY38X31sdCrrExMgam6LysrxyJA29Uk_-PXM485Ope2BynR3dX-lfrtjc3R_NkqYB6zHXmMt6rbHsznYHK7X3wXI6UxAt-OFIAd9n20rQUB57ID0rEi1XB7TGp4v7mBrJKZYdYn8yprHct20jcBBGKcO5zxpYjxBXV0GlpDxC0A50ntj-DbUyAc4uj2gpPsACYzLsbC01ISUBhJyzZ4mKpjEKrm8Fl4PMallPImoQBR8NnUHMVTSmfLdJhi0SrECmDS7VpbFfk1cDChJZJMfqPdG11LDLfQ_tic83LnC4f2jcDBwbDuSmgzgcszkrDJ87_1hUtyoSgJd8nhbE4RYoNozvNrq4-AMG7C5zG53JaJWsYnca3yHIj_olVSm4Iuz69Ew2FjI1Zn_rBj8hHDTBtxi96sg3c1lG2MstHijgb4M92JfXB-TjZfBMXLAeZWwpPi9brletdbZut_WTIFsRszWyvElt5pZzQecNN4d1CpU0mZiGZx3T1Og-lPn_KG1XHqoDSrkb4ySCgpWoitXCOh66aOWbQqokiUJ5ojfIpHH7fsGTptmAWI2m5WMLUc19AsgBfZtAhx1n3PFyAWh6CBKAoin4K2vdGAZHdhVC_ZnWgU-0H1bR4ZJuEBID5pZKr7QUWI_JLHoh9n-gL_tmFMj8keA_YPPTkS4rv6iMjJC0r0-iCcHsmfwMUNcjBdAhZpnTPhQeUZW9YWEW6WV9d8H92tCAiyFWHq87Libndy_yXeEsNBol9sGVRYRrnfAG0NjgND7tk1Qi3qySCWjoAdwuHvaea3a69U-LC-WyeTJU7mOY7Rs2fTq5KAESKe3vDJLMXJg=s30-no?authuser=0');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.result-box{
+  text-align: center;
+}
+.result-box.hide{
+  display: none;
+}
+.result-box h1{
+  font-size:36px;
+  line-height: 42px;
+  color:#009688;
+}
+.result-box table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+.result-box table td{
+  border: 1px solid #cccccc;
+  padding: 8px 15px;
+  font-weight: 500;
+  color: #000000;
+  width: 50%;
+  text-align: left;
+  font-size:18px;
+}
+.result-box .btn{
+  margin-right: 20px;
+}
+@media (max-width: 767px){
+  .result-box .btn{
+    margin-bottom: 15px;
+  }
+  body{
+    padding: 15px;
+  }
+}

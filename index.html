@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - quiz ENG</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<html>
+<body>
+  <div class="home-box custom-box">
+    <h3>WELCOME TO CYBER SECURITY QUIZ GAME</h3>
+    <p>Total question: <span class="total-question">5</span></p> 
+    <button type="button" class="btn" onclick="startQuiz()">Start</button>
+  </div>
+  <div class="quiz-box custom-box hide">
+    <div class="question-number">
+
+    </div>
+    <div class="question-text">
+
+    </div>
+    <div class="option-container">
+
+    </div>
+    <div class="next-question-btn">
+      <button type="button" class="btn" onclick="next()">Next</button>
+    </div>
+    <div class="answer-indicator">
+
+    </div>
+  </div>
+  <div class="result-box custom-box hide">
+    <h1>Result</h1>
+    <table>
+      <tr>
+        <td>Total question</td>
+        <td><span class="total-question"></span></td>
+      </tr>
+      <tr>
+        <td>Correct answer</td>
+        <td><span class="total-corect"></span></td>
+      </tr>
+      <tr>
+        <td>Total score</td>
+        <td><span class="total-score"></span></td>
+      </tr>
+      <tr>
+        <td>Notification</td>
+        <td><span class="percentage"></span></td>
+      </tr>
+      
+    </table>
+    <button type="button" class="btn" onclick="tryAgain()">Retry</button>
+    <button type="button" class="btn" onclick="goToHome()">Home</button>     
+  </div>
+  <script src="js/question.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
